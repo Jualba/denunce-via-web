@@ -1,0 +1,21 @@
+<div *ngIf="isLoading" class="loading-container">
+  <div class="progress-spinner progress-spinner-double progress-spinner-active loading-spinner">
+    <div class="progress-spinner-inner"></div>
+    <div class="progress-spinner-inner"></div>
+    <span class="sr-only">Loading...</span>
+  </div>
+</div>
+
+<app-header></app-header>
+<div class="wrapper">
+  <main>
+    <div class="section section-muted section-1 p-0 pb-5">
+      <div class="section-content">
+        <div class="container">
+            <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<app-footer></app-footer>

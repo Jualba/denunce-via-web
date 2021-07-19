@@ -1,0 +1,19 @@
+<div class="modal fade" tabindex="-1" role="dialog" [id]="id + 'ConfirmDialog'">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{dialogValues?.title || 'COMMON.CONFIRM' | translate}}</h5>
+      </div>
+      <div class="modal-body">
+        <p>{{dialogValues?.text | translate}}</p>
+        <div class="mt-4" *ngIf="dialogValues?.msgLabel">
+          <agid-textarea [id]="'confirmMsg'" [label]="dialogValues?.msgLabel" note="" [max]="dialogValues.maxlength" [control]="msgInput"></agid-textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-outline-primary btn-sm" data-dismiss="modal" type="button">{{'COMMON.CANCEL' | translate}}</button>
+        <button class="btn btn-primary btn-sm" type="button" (click)="confirm()">{{'COMMON.CONFIRM' | translate}}</button>
+      </div>
+    </div>
+  </div>
+</div>

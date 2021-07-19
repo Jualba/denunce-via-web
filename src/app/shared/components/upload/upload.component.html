@@ -1,0 +1,64 @@
+<div class="upload-dragdrop" (dragover)="dragOn($event)" (dragleave)="dragOff($event)" (drop)="drop($event)"
+     [ngClass]="{'dragover': isDrag, 'loading': isLoading,'success': isLoaded}">
+  <div class="upload-dragdrop-image">
+    <img src="./assets/svg/upload-drag-drop-icon.svg" alt="upload" aria-hidden="true">
+    <div *ngIf="!isLoaded" class="upload-dragdrop-loading">
+      <div [id]="id + 'Progress'" class="upload-progress"></div>
+    </div>
+    <div class="upload-dragdrop-success">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="./assets/svg/sprite.svg#it-check"></use>
+      </svg>
+    </div>
+  </div>
+  <div class="upload-dragdrop-text">
+    <div class="row" tabindex="0" (blur)="removeDeleteError()">
+      <div [class]="isLoaded ? 'col-lg-11 col-md-10' : 'col-sm-12'">
+        <p class="upload-dragdrop-weight">
+          <ng-container *ngIf="!fileError">
+            <span tabindex="0" [ngStyle]="control?.value && {'cursor': 'pointer'}" (click)="downloadFile()">
+              <svg class="icon icon-xs" aria-hidden="true">
+                <use xlink:href="./assets/svg/sprite.svg#it-file"></use>
+              </svg>
+              {{fileName}} {{fileType}} {{fileSize}}
+            </span>
+          </ng-container>
+          <span *ngIf="fileError" class="invalid-upload-feedback">{{fileError | translate}}</span>
+          <span *ngIf="fileError === 'ERRORS.INVALID_EXT'" class="error-note">
+            {{'COMPONENT.UPLOAD.VALID_EXT' | translate}} {{validTypes}}</span>
+          <span *ngIf="fileError === 'ERRORS.INVALID_SIZE'" class="error-note">
+            {{'COMPONENT.UPLOAD.VALID_SIZE' | translate}} {{validSize}}</span>
+
+        </p>
+        <ng-container *ngIf="!isLoaded && !isLoading">
+          <h5>{{label | translate}}{{required === '' ? '*' : ''}}</h5>
+          <p>{{'COMPONENT.UPLOAD.INSERT_OR' | translate}}
+            <input type="file" [name]="id + 'Upload'" [id]="id + 'Upload'" [accept]="contentTypes"
+                   class="upload-dragdrop-input" (change)="handleUpload($event.target)"/>
+            <label [for]="id + 'Upload'" tabindex="0" class="m-0" (click)="fileError = ''">
+              {{'COMPONENT.UPLOAD.SELECT_FROM' | translate}}</label>
+          </p>
+        </ng-container>
+        <ng-container *ngIf="isLoading">
+          <h5>{{label | translate}}{{required === '' ? '*' : ''}}</h5>
+          <p>{{'COMPONENT.UPLOAD.UPLOADING' | translate}}</p>
+        </ng-container>
+        <ng-container *ngIf="isLoaded">
+          <div tabindex="0">
+            <h5>{{label | translate}}</h5>
+            <p>{{'COMPONENT.UPLOAD.UPLOADED' | translate}}</p>
+          </div>
+        </ng-container>
+      </div>
+      <div *ngIf="isLoaded && deletable" class="col-sm-1 my-auto">
+        <a href="#" (click)="deleteFile()">
+          <svg class="icon icon-sm" aria-hidden="true">
+            <use xlink:href="./assets/svg/sprite.svg#it-delete"></use>
+          </svg>
+          <span class="sr-only">{{'COMMON.DELETE' | translate}}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <input [formControl]="control" type="submit" class="d-none"/>
+</div>

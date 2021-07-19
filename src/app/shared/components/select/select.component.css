@@ -1,0 +1,16 @@
+.is-select-valid button {
+  border-bottom-width: initial;
+  padding-right: calc(1.5em + .75rem);
+}
+
+::ng-deep .is-select-invalid + button .filter-option::after {
+  background: #d9364f;
+}
+
+::ng-deep .bootstrap-select-wrapper .bootstrap-select.form-control {
+  background-color: white;
+}
+
+::ng-deep .bootstrap-select-wrapper button.disabled {
+  cursor: not-allowed;
+}

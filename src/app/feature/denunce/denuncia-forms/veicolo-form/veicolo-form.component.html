@@ -1,0 +1,46 @@
+<app-commissariato-form [id]="'veicolo'" [form]="form" [denuncia]="denuncia"></app-commissariato-form>
+<div class="row justify-content-center">
+  <div class="col-md-6 col-11 py-1 pb-4">
+    <agid-input [control]="form.get('numeroTarga')" [id]="'veicolo_numeroTarga'"
+                label="DENUNCIA.NUMERO_TARGA" required></agid-input>
+  </div>
+  <div class="col-md-6 d-none d-md-block">
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-md-6 col-11 py-1 pb-4">
+    <agid-input [control]="form.get('marcaVeicolo')" [id]="'veicolo_marcaVeicolo'"
+                label="DENUNCIA.MARCA_VEICOLO" required></agid-input>
+  </div>
+  <div class="col-md-6 col-11 py-1 pb-4">
+    <agid-input [control]="form.get('modelloVeicolo')" [id]="'veicolo_modelloVeicolo'"
+                label="DENUNCIA.MODELLO_VEICOLO" required></agid-input>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-md-6 col-11 py-1 pb-4">
+    <agid-input [control]="form.get('coloreVeicolo')" [id]="'veicolo_coloreVeicolo'"
+                label="DENUNCIA.COLORE_VEICOLO" required></agid-input>
+  </div>
+  <div class="col-md-6 col-11 py-1 pb-4">
+    <agid-input [control]="form.get('telaioVeicolo')" [id]="'veicolo_telaioVeicolo'"
+                label="DENUNCIA.TELAIO_VEICOLO" required></agid-input>
+  </div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-md-6 col-11 py-1 pb-4">
+    <agid-datepicker [control]="form.get('dataSmarrimento')" [id]="'veicolo_dataSmarrimento'"
+                     label="DENUNCIA.DATA_SMARRIMENTO" max="today" required></agid-datepicker>
+  </div>
+  <div class="col-md-6 d-none d-md-block"></div>
+</div>
+
+<div class="row justify-content-center">
+  <div class="col-md-12 col-11 py-1 pb-4">
+    <agid-textarea [control]="form.get('luogoSmarrimento')" [id]="'veicolo_luogoSmarrimento'"
+                   label="DENUNCIA.LUOGO_SMARRIMENTO" [max]="250" required></agid-textarea>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="form-group">
+  <label [for]="id" [attr.aria-labelledby]="label | translate" [ngClass]="{active: control.value || control.value === 0}">
+    {{label | translate}}{{required === '' ? '*' : ''}}
+    <a *ngIf="info" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="{{titlePopover}}" [attr.data-content]="textPopover">
+      <svg class="icon icon-primary icon-sm ml-2 mb-1">
+        <use xlink:href="./assets/svg/sprite.svg#it-info-circle"></use>
+      </svg>
+    </a>
+  </label>
+  <input [id]="id" [type]="type" [formControl]="control" class="form-control"
+         [ngClass]="{'is-input-valid': (control.valid) && (control.value || control.value === 0),
+         'is-input-invalid': (control.dirty || ((control.value || control.value === 0) && control.touched)) && control.invalid }"
+         [attr.aria-describedby]="id + 'Note'" [minlength]="min" [maxlength]="max" [readonly]="readonly">
+  <span class="autocomplete-icon">
+    <svg *ngIf="control.valid && (control.value || control.value === 0)" class="icon icon-success" aria-hidden="true">
+      <use xlink:href="./assets/svg/sprite.svg#it-check"></use>
+    </svg>
+    <svg *ngIf="(control.dirty || ((control.value || control.value === 0) && control.touched)) && control.invalid" class="icon icon-danger" aria-hidden="true">
+      <use xlink:href="./assets/svg/sprite.svg#it-close"></use>
+    </svg>
+  </span>
+  <small *ngIf="!((control.dirty || ((control.value || control.value === 0) && control.touched)) && control.invalid)" [id]="id + 'Note'" class="form-text text-muted">
+    <span *ngIf="!control.disabled">{{note | translate}}</span>
+  </small>
+  <small *ngIf="control.dirty || ((control.value || control.value === 0) && control.touched)" [id]="id + 'Note'" class="error-text form-text">
+    <span *ngIf="control.hasError('required')">{{"ERRORE.CAMPO_OBBL" | translate}}</span>
+    <span *ngIf="control.hasError('pattern')">{{"ERRORE.CAMPO_INVALIDO" | translate}}</span>
+    <span *ngIf="control.hasError('minlength')">{{"ERRORE.LUNGHEZZA_MIN" | translate:{min: min} }}</span>
+  </small>
+</div>

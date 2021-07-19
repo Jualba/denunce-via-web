@@ -1,0 +1,18 @@
+.is-input-valid {
+  border-width: initial;
+  padding-right: calc(1.5em + .75rem);
+}
+
+.is-input-invalid {
+  border-width: initial;
+  border-color: #d9364f;
+  padding-right: calc(1.5em + .75rem);
+}
+
+.form-control, .autocomplete-icon {
+  background-color: transparent;
+}
+
+.form-control:disabled, .form-control[readonly] {
+  opacity: 0.65;
+}

@@ -1,0 +1,7 @@
+<div [id]="id" class="alert white-bg fade show" [class]="'alert-' + alert?.type" role="alert" style="display: none">
+  <button type="button" class="close" (click)="closeAlert()" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+  <h4 *ngIf="alert?.title" class="alert-heading">{{alert?.title | translate}}</h4>
+  <span>{{alert?.text | translate}}</span>
+</div>

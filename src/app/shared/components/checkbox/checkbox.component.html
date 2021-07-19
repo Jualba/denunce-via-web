@@ -1,0 +1,30 @@
+<div [class]="class" *ngIf="control">
+  <input [formControl]="control" [id]="id" type="checkbox" [attr.aria-describedby]="id + 'help'">
+  <label [for]="id" [ngClass]="{'error-text': control.invalid && control.dirty, 'font-weight-bold': true}">
+    {{label | translate}}{{required === '' ? '*' : ''}}
+    <a *ngIf="info" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right"
+       title="{{titlePopover}}" [attr.data-content]="textPopover">
+      <svg class="icon icon-primary icon-sm ml-2 mb-1">
+        <use xlink:href="./assets/svg/sprite.svg#it-info-circle"></use>
+      </svg>
+    </a>
+  </label>
+  <small [id]="id + 'help'" class="form-text form-text-small"
+         *ngIf="(control.valid || !control.dirty) && description">{{description | translate}}</small>
+  <small [id]="id + 'help'" class="form-text error-text form-text-small"
+         *ngIf="(control.invalid && control.dirty) && message">{{message | translate}}</small>
+</div>
+
+<div [class]="class" *ngIf="!control">
+  <input [id]="id" type="checkbox" [attr.aria-describedby]="id + 'help'" [checked]="checked? 'checked' : ''">
+  <label [for]="id" class="font-weight-bold">
+    {{label | translate}}
+    <a *ngIf="info" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right"
+       title="{{titlePopover}}" [attr.data-content]="textPopover">
+      <svg class="icon icon-primary icon-sm ml-2 mb-1">
+        <use xlink:href="./assets/svg/sprite.svg#it-info-circle"></use>
+      </svg>
+    </a>
+  </label>
+  <small [id]="id + 'help'" class="form-text form-text-small" *ngIf="description">{{description | translate}}</small>
+</div>

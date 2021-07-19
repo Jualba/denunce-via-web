@@ -1,0 +1,37 @@
+<ng-container *ngIf="domandeList.length > 0">
+  <form formControlName="selectControl">
+    <div class="agid-table table-responsive">
+      <table class="table table-separate">
+        <thead class="table-sm table-th-no-border lightgrey-bg-c1 neutral-1-color-a7">
+          <tr class="text-uppercase">
+            <th scope="col">Data iscrizione</th>
+            <th scope="col">Cognome e nome</th>
+            <th scope="col">Stato</th>
+            <th scope="col"></th>
+            <th scope="col">Responsabile Procedimento</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let domanda of domandeList; index as i" class="table-td-no-border bg-white shadow-sm text-truncate">
+            <td>{{domanda?.data_iscrizione || '-' | date }}</td>
+            <td>{{domanda?.nome || '-' }}</td>
+            <td>{{domanda?.stato || '-' }}</td>
+            <td class="p-0">
+              <button class="btn btn-table btn-primary text-nowrap" (click)="dettaglioDomanda(domanda.id)">
+                {{'COMMON.DETTAGLIO' | translate}}
+              </button>
+            </td>
+            <td>
+              <agid-select [id]=domanda.id
+              required="test"
+               optionName="value"
+               [control]=selectControl.controls[0]
+                [noEmptyOption]=true [info]=false titlePopover="title" textPopover="text" [options]=domanda.options>
+              </agid-select>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+</ng-container>

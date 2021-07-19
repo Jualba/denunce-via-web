@@ -1,0 +1,19 @@
+.it-footer-main, .it-footer-small-prints {
+  background-color: #01254C;
+  font-size: 14px;
+}
+.it-footer-small-prints a{
+  font-size: 14px;
+}
+
+@media (max-width: 576px) {
+  .footer-border {
+    border-top: 1px solid #fff!important;
+  }
+  .it-footer-main {
+    background-color: #174583;
+  }
+  .it-footer-small-prints {
+    background-color: #033669;
+  }
+}

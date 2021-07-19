@@ -1,0 +1,11 @@
+.is-textarea-valid {
+  padding-right: calc(1.5em + .75rem);
+}
+.is-textarea-invalid {
+  border-color: #d9364f;
+  padding-right: calc(1.5em + .75rem);
+}
+
+.form-control {
+  box-shadow: inset 0 0 0 rgb(0 0 0);
+}

@@ -1,0 +1,33 @@
+<div class="section section-muted section-1 p-0 pb-5">
+  <div class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div class="tab-content my-5 p-5 bg-white">
+            <ng-container *ngIf="denuncia?.tipoDenuncia === tipoDenuncia.TARGA">
+              <form [formGroup]="form" novalidate autocomplete="off">
+                <app-targa-form [form]="form" [denuncia]="denuncia"></app-targa-form>
+                <div class="d-flex flex-row-reverse">
+                  <button type="button" (click)="indietro()" class="btn btn-outline-primary btn-lg mr-2">
+                    {{'COMMON.INDIETRO' | translate}}
+                  </button>
+                </div>
+              </form>
+            </ng-container>
+            <ng-container *ngIf="denuncia?.tipoDenuncia === tipoDenuncia.VEICOLO">
+              <form [formGroup]="form" novalidate autocomplete="off">
+                <app-veicolo-form [form]="form" [denuncia]="denuncia"></app-veicolo-form>
+                <div class="d-flex flex-row-reverse">
+                  <button type="button" (click)="indietro()" class="btn btn-outline-primary btn-lg mr-2">
+                    {{'COMMON.INDIETRO' | translate}}
+                  </button>
+                </div>
+              </form>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

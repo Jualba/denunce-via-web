@@ -1,0 +1,22 @@
+<div class="row">
+  <form class="mt-5">
+    <div class="row">
+      <h3>Dashboard</h3>
+      <hr />
+    </div>
+    <div class="form">
+      <div class="input-inline mb-2">
+        <strong class="col-4 mr-4">Cognome</strong>
+        <input type="text" class="col-8" id="cognome">
+      </div>
+    </div>
+    <div class="input-inline">
+      <strong class="col-4 mr-4">Sezione</strong>
+      <agid-select class="select-inline col-8" [note]="null" [options]="sezioni" [title]="null" [control]='formTest'
+        [id]="'sezioni-id'"></agid-select>
+    </div>
+  </form>
+</div>
+<div class="row">
+  <app-domande-da-assegnare-table class="col-12"></app-domande-da-assegnare-table>
+</div>

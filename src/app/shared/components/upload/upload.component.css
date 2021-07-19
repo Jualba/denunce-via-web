@@ -1,0 +1,32 @@
+.invalid-upload-feedback {
+  color: #d9364f;
+  visibility: visible !important;
+}
+
+.error-note {
+  display: block;
+  visibility: visible !important;
+}
+
+.upload-dragdrop-image .upload-dragdrop-success {
+  width: 24px;
+  height: 24px;
+}
+
+@media (min-width: 768px) {
+  .upload-dragdrop-loading .upload-progress {
+    top: -65px;
+    left: -65px;
+  }
+  .upload-dragdrop-image {
+    width: 90px;
+    height: 90px;
+    margin-right: 24px;
+  }
+  .upload-dragdrop-image .upload-dragdrop-success {
+    width: 16px;
+    height: 16px;
+    left: 16px;
+    top: calc(50% - 14px);
+  }
+}
