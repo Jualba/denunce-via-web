@@ -1,0 +1,75 @@
+{
+  "COMMON": {
+    "MINISTERO_INTERNO": "Ministero dell’interno",
+    "POLIZIA_DI_STATO": "State police",
+    "SCEGLI_OPZIONE": "Scegli una opzione",
+    "ANNULLA": "Annulla",
+    "SALVA": "Salva",
+    "ELIMINA": "Elimina",
+    "DETTAGLIO": "Dettaglio",
+    "CERCA": "Cerca",
+    "CONTINUA": "Continua",
+    "INDIETRO": "Indietro",
+    "CONFERMA": "Conferma",
+    "APRI": "Apri",
+    "CHIUDI": "Chiudi",
+    "NESSUN_DATO": "Nessun dato presente",
+    "SI": "Sì",
+    "NO": "No"
+  },
+  "ERRORE": {
+    "CAMPO_OBBL": "Campo obbligatorio",
+    "CAMPO_INVALIDO": "Campo invalido",
+    "LUNGHEZZA_MIN": "Minimo {{min}} caratteri",
+    "ITERVALLO_DATE": "Intervallo di date non valido",
+    "SERVER_ERROR": "Si è verificato un errore del server. Si prega di riprovare più tardi. Grazie."
+  },
+  "COMPONENT": {
+    "INPUT": {
+      "INSERISCI": "Inserisci"
+    },
+    "SELECT": "Seleziona",
+    "DATEPICKER": {
+      "SELEZIONA_DATA": "Seleziona un data dal calendario",
+      "CANCELLA_DATA": "Cancella data"
+    }
+  },
+  "HEADER": {
+    "CIAO": "Ciao",
+    "DENUNCE": "Denunce"
+  },
+  "FOOTER": {
+    "CONTATTI": "Contatti",
+    "LINK_UTILI": "Link utili",
+    "DICHIARAZIONE_ACCESS": "Dichiarazione di Accessibilità",
+    "AMMINISTRAZIONE_TRASPARENTE": "Amministrazione Trasparente"
+  },
+  "DENUNCIA": {
+    "NUOVA_DENUNCIA": "Nuova Denuncia",
+    "MIE_DENUNCE": "Le mie denunce",
+    "DESCRIZIONE": "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.",
+    "SPORGI_DENUNCIA": "Sporgi denuncia",
+    "SPORGI_DENUNCIA_DESCR": "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.",
+    "TARGA": "Targa",
+    "VEICOLO": "Veicolo",
+    "DOCUMENTI": "Documenti",
+    "TITOLI": "Titoli",
+    "ARMI": "Armi",
+    "ALTRO": "Altro",
+    "TIPO_DENUNCIA": "Tipo denuncia",
+    "DATA_INSERIMENTO": "Data inserimento",
+    "COMMISSARIATO": "Commissariato",
+    "SCARICA_ATTO": "Scarica atto",
+    "INVIA_DENUNCIA": "Invia denuncia",
+    "PROVINCIA_COMMISSARIATO": "Provincia commissariato",
+    "QUESTURA": "Questura",
+    "NUMERO_TARGA": "Numero targa",
+    "POSIZIONE_TARGA": "Posizione targa",
+    "MARCA_VEICOLO": "Marca veicolo",
+    "MODELLO_VEICOLO": "Modello veicolo",
+    "COLORE_VEICOLO": "Colore veicolo",
+    "TELAIO_VEICOLO": "Telaio veicolo",
+    "DATA_SMARRIMENTO": "Data smarrimento",
+    "LUOGO_SMARRIMENTO": "Luogo smarrimento"
+  }
+}

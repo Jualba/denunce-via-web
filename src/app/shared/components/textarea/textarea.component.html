@@ -1,0 +1,29 @@
+
+<div class="form-group">
+  <label [for]="id + 'Textarea'" [attr.aria-labelledby]="label" [ngClass]="{active: control.value}">
+    {{label | translate}}{{required === '' ? '*' : ''}}
+    <a *ngIf="info" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="{{titlePopover}}" [attr.data-content]="textPopover">
+      <svg class="icon icon-primary icon-sm ml-2 mb-1">
+        <use xlink:href="./assets/svg/sprite.svg#it-info-circle"></use>
+      </svg>
+    </a>
+  </label>
+  <textarea [id]="id + 'Textarea'"   [formControl]="control"
+            [ngClass]="{'is-textarea-valid': control.valid, 'is-textarea-invalid': control.dirty && control.invalid,
+        'form-control-plaintext ': readonly}"
+            [attr.aria-describedby]="id + 'Note'" [rows]="rows" [minlength]="min" [maxlength]="max" [readonly]="readonly"></textarea>
+
+  <div>
+    <small *ngIf="!(control.dirty && control.invalid) && control.enabled"
+           [id]="id + 'NoteTextarea'" class="form-text text-muted">{{note | translate}}
+    </small>
+    <small *ngIf="max" class="form-text text-muted" style="right: 0">{{control.value.length}}/{{max}}</small>
+
+    <small *ngIf="control.dirty"  [id]="id + 'NoteTextarea'" class="error-text form-text">
+      <span *ngIf="control.hasError('required')">{{"ERRORE.CAMPO_OBBL" | translate}}</span>
+      <span *ngIf="control.hasError('pattern')">{{"ERRORE.CAMPO_INVALIDO" | translate}}</span>
+      <span *ngIf="control.hasError('minlength')">{{"ERRORE.LUNGHEZZA_MIN" | translate:{min: min} }}</span>
+    </small>
+  </div>
+</div>
+

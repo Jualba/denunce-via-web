@@ -1,0 +1,22 @@
+<div [class]="class">
+  <label [for]="id" [attr.aria-labelledby]="label">
+    {{label | translate}}{{required === '' ? '*' : ''}}
+    <a *ngIf="info" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right"
+       title="{{titlePopover}}" [attr.data-content]="textPopover">
+      <svg class="icon icon-primary icon-sm ml-2 mb-1">
+        <use xlink:href="./assets/svg/sprite.svg#it-info-circle"></use>
+      </svg>
+    </a>
+  </label>
+  <select title="{{title | translate}}" [id]="id" [formControl]="control" class="form-control"
+          [ngClass]="{'is-select-valid': control.valid, 'is-select-invalid': control.dirty && control.invalid}"
+          [attr.aria-describedby]="id + 'Note'">
+  </select>
+  <small *ngIf="!(control.dirty && control.invalid)" [id]="id + 'Note'" class="form-text text-muted">
+    <span *ngIf="!control.disabled">{{note | translate}}</span>
+  </small>
+  <small *ngIf="control.dirty" [id]="id + 'Note'" class="error-text form-text">
+    <span *ngIf="control.hasError('required')">{{"ERRORE.CAMPO_OBBL" | translate}}</span>
+    <span *ngIf="control.hasError('pattern')">{{"ERRORE.CAMPO_INVALIDO" | translate}}</span>
+  </small>
+</div>

@@ -1,0 +1,142 @@
+<div class="section section-muted section-1 p-0 pb-5">
+  <div class="section-content">
+    <div class="container">
+      <div class="row instance-detail">
+        <div class="col-sm-12">
+          <nav class="my-4">
+            <div class="nav nav-tabs nav-tabs-icon-text" id="tabsFormDenunciaLinks" role="tablist">
+              <a class="nav-item nav-link active" id="appInfoTab" data-toggle="tab" href="#tabFormTarga" role="tab"
+                 aria-controls="tabFormTarga" aria-selected="true">
+                <img class="icon" src="./assets/images/targa.png" alt="targa">
+                {{'DENUNCIA.TARGA' | translate}}
+              </a>
+              <a class="nav-item nav-link" id="tabFormVeicoloLink" data-toggle="tab" href="#tabFormVeicolo" role="tab"
+                 aria-controls="tabFormVeicolo" aria-selected="false">
+                <img class="icon" src="./assets/images/veicolo.png" alt="veicolo">
+                {{'DENUNCIA.VEICOLO' | translate}}
+              </a>
+              <a class="nav-item nav-link" id="tabFormDocumentiLink" data-toggle="tab" href="#tabFormDocumenti" role="tab"
+                 aria-controls="tabFormDocumenti" aria-selected="false">
+                <img class="icon" src="./assets/images/documenti.png" alt="documenti">
+                {{'DENUNCIA.DOCUMENTI' | translate}}
+              </a>
+              <a class="nav-item nav-link" id="tabFormTitoliLink" data-toggle="tab" href="#tabFormTitoli" role="tab"
+                 aria-controls="tabFormTitoli" aria-selected="false">
+              <img class="icon" src="./assets/images/titoli.png" alt="titoli">
+                {{'DENUNCIA.TITOLI' | translate}}
+              </a>
+              <a class="nav-item nav-link" id="tabFormArmiLink" data-toggle="tab" href="#tabFormArmi" role="tab"
+                 aria-controls="tabFormArmi" aria-selected="false">
+                <img class="icon" src="./assets/images/armi.png" alt="armi">
+                {{'DENUNCIA.ARMI' | translate}}
+              </a>
+              <a class="nav-item nav-link" id="tabFormAltroLink" data-toggle="tab" href="#tabFormAltro" role="tab"
+                 aria-controls="tabFormAltro" aria-selected="false">
+                <img class="icon" src="./assets/images/altro.png" alt="altro">
+                {{'DENUNCIA.ALTRO' | translate}}
+              </a>
+            </div>
+          </nav>
+
+          <div class="tab-content p-4 bg-white" id="tabsFormDenuncia">
+
+            <!-- TAB FORM TARGA -->
+            <div id="tabFormTarga" class="tab-pane text-break pt-4 fade show active" role="tabpanel"
+                 aria-labelledby="tabFormTarga">
+              <form (ngSubmit)="inviaDenuncia(denunciaTargaForm)" [formGroup]="denunciaTargaForm" novalidate autocomplete="off">
+<!--                <app-domanda-form [form]="denunciaTargaForm" [denuncia]="denuncia"></app-domanda-form>-->
+                <div class="d-flex flex-row-reverse">
+                  <button type="submit" [disabled]="denunciaTargaForm.invalid"
+                          class="btn btn-primary btn-lg">{{'DENUNCIA.INVIA_DENUNCIA' | translate}}
+                  </button>
+                  <button type="button" (click)="annullaDenuncia()" class="btn btn-outline-primary btn-lg mr-2">
+                    {{'COMMON.ANNULLA' | translate}}
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- TAB FORM VEICOLO -->
+            <div id="tabFormVeicolo" class="tab-pane pt-4 fade" role="tabpanel" aria-labelledby="tabFormVeicolo">
+              <form (ngSubmit)="inviaDenuncia(denunciaVeicoloForm)" [formGroup]="denunciaVeicoloForm" novalidate autocomplete="off">
+                <app-veicolo-form [form]="denunciaVeicoloForm" [denuncia]="denuncia"></app-veicolo-form>
+                <div class="d-flex flex-row-reverse">
+                  <button type="submit" [disabled]="denunciaVeicoloForm.invalid"
+                          class="btn btn-primary btn-lg">{{'DENUNCIA.INVIA_DENUNCIA' | translate}}
+                  </button>
+                  <button type="button" (click)="annullaDenuncia()" class="btn btn-outline-primary btn-lg mr-2">
+                    {{'COMMON.ANNULLA' | translate}}
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- TAB FORM DOCUMENTI -->
+            <div id="tabFormDocumenti" class="tab-pane pt-4 fade" role="tabpanel" aria-labelledby="tabFormDocumenti">
+              <form (ngSubmit)="inviaDenuncia(denunciaDocumentiForm)" [formGroup]="denunciaDocumentiForm" novalidate autocomplete="off">
+                <app-documenti-form [form]="denunciaDocumentiForm" [denuncia]="denuncia"></app-documenti-form>
+                <div class="d-flex flex-row-reverse">
+                  <button type="submit" [disabled]="denunciaDocumentiForm.invalid"
+                          class="btn btn-primary btn-lg">{{'DENUNCIA.INVIA_DENUNCIA' | translate}}
+                  </button>
+                  <button type="button" (click)="annullaDenuncia()" class="btn btn-outline-primary btn-lg mr-2">
+                    {{'COMMON.ANNULLA' | translate}}
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- TAB FORM TITOLI -->
+            <div id="tabFormTitoli" class="tab-pane pt-4 fade" role="tabpanel" aria-labelledby="tabFormTitoli">
+              <form (ngSubmit)="inviaDenuncia(denunciaTitoliForm)" [formGroup]="denunciaTitoliForm" novalidate autocomplete="off">
+                <app-titoli-form [form]="denunciaTitoliForm" [denuncia]="denuncia"></app-titoli-form>
+                <div class="d-flex flex-row-reverse">
+                  <button type="submit" [disabled]="denunciaTitoliForm.invalid"
+                          class="btn btn-primary btn-lg">{{'DENUNCIA.INVIA_DENUNCIA' | translate}}
+                  </button>
+                  <button type="button" (click)="annullaDenuncia()" class="btn btn-outline-primary btn-lg mr-2">
+                    {{'COMMON.ANNULLA' | translate}}
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- TAB FORM ARMI -->
+            <div id="tabFormArmi" class="tab-pane pt-4 fade" role="tabpanel" aria-labelledby="tabFormArmi">
+              <form (ngSubmit)="inviaDenuncia(denunciaArmiForm)" [formGroup]="denunciaArmiForm" novalidate autocomplete="off">
+                <app-armi-form [form]="denunciaArmiForm" [denuncia]="denuncia"></app-armi-form>
+                <div class="d-flex flex-row-reverse">
+                  <button type="submit" [disabled]="denunciaArmiForm.invalid"
+                          class="btn btn-primary btn-lg">{{'DENUNCIA.INVIA_DENUNCIA' | translate}}
+                  </button>
+                  <button type="button" (click)="annullaDenuncia()" class="btn btn-outline-primary btn-lg mr-2">
+                    {{'COMMON.ANNULLA' | translate}}
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- TAB FORM ALTRO -->
+            <div id="tabFormAltro" class="tab-pane pt-4 fade" role="tabpanel" aria-labelledby="tabFormAltro">
+              <form (ngSubmit)="inviaDenuncia(denunciaAltroForm)" [formGroup]="denunciaAltroForm" novalidate autocomplete="off">
+                <app-altro-form [form]="denunciaAltroForm" [denuncia]="denuncia"></app-altro-form>
+                <div class="d-flex flex-row-reverse">
+                  <button type="submit" [disabled]="denunciaAltroForm.invalid"
+                          class="btn btn-primary btn-lg">{{'DENUNCIA.INVIA_DENUNCIA' | translate}}
+                  </button>
+                  <button type="button" (click)="annullaDenuncia()" class="btn btn-outline-primary btn-lg mr-2">
+                    {{'COMMON.ANNULLA' | translate}}
+                  </button>
+                </div>
+              </form>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

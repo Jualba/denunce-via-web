@@ -1,0 +1,117 @@
+{
+  "COMMON": {
+    "MINISTERO_INTERNO": "Ministero dell’interno",
+    "POLIZIA_DI_STATO": "Polizia di stato",
+    "GOVERNO_ITALIANO": "Governo Italiano",
+    "SCEGLI_OPZIONE": "Scegli una opzione",
+    "ANNULLA": "Annulla",
+    "SALVA": "Salva",
+    "ELIMINA": "Elimina",
+    "DETTAGLIO": "Dettaglio",
+    "CERCA": "Cerca",
+    "CONTINUA": "Continua",
+    "INDIETRO": "Indietro",
+    "CONFERMA": "Conferma",
+    "APRI": "Apri",
+    "CHIUDI": "Chiudi",
+    "NESSUN_DATO": "Nessun dato presente",
+    "SI": "Sì",
+    "NO": "No"
+  },
+  "ERRORE": {
+    "CAMPO_OBBL": "Campo obbligatorio",
+    "CAMPO_INVALIDO": "Campo invalido",
+    "LUNGHEZZA_MIN": "Minimo {{min}} caratteri",
+    "ITERVALLO_DATE": "Intervallo di date non valido",
+    "SERVER_ERROR": "Si è verificato un errore del server. Si prega di riprovare più tardi. Grazie."
+  },
+  "COMPONENT": {
+    "INPUT": {
+      "INSERISCI": "Inserisci"
+    },
+    "SELECT": "Seleziona",
+    "DATEPICKER": {
+      "SELEZIONA_DATA": "Seleziona un data dal calendario",
+      "CANCELLA_DATA": "Cancella data"
+    }
+  },
+  "HEADER": {
+    "CIAO": "Ciao",
+    "DENUNCE": "Denunce",
+    "HOME": "Home",
+    "LE_MIE_DOMANDE": "Le mie domande",
+    "CONSULTA_LELENECA_PUBBLICO": "Consulta L'eleneco pubblico",
+    "ISTRUZIONI": "Istruzioni"
+  },
+  "FOOTER": {
+    "CONTATTI": "Contatti",
+    "LINK_UTILI": "Link utili",
+    "DICHIARAZIONE_ACCESS": "Dichiarazione di Accessibilità",
+    "AMMINISTRAZIONE_TRASPARENTE": "Amministrazione Trasparente"
+  },
+  "DENUNCIA": {
+    "NUOVA_DENUNCIA": "Nuova Denuncia",
+    "MIE_DENUNCE": "Le mie denunce",
+    "DESCRIZIONE": "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.",
+    "SPORGI_DENUNCIA": "Sporgi denuncia",
+    "SPORGI_DENUNCIA_DESCR": "Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.",
+    "TARGA": "Targa",
+    "VEICOLO": "Veicolo",
+    "DOCUMENTI": "Documenti",
+    "TITOLI": "Titoli",
+    "ARMI": "Armi",
+    "ALTRO": "Altro",
+    "TIPO_DENUNCIA": "Tipo denuncia",
+    "DATA_INSERIMENTO": "Data inserimento",
+    "COMMISSARIATO": "Commissariato",
+    "SCARICA_ATTO": "Scarica atto",
+    "INVIA_DENUNCIA": "Invia denuncia",
+    "PROVINCIA_COMMISSARIATO": "Provincia commissariato",
+    "QUESTURA": "Questura",
+    "NUMERO_TARGA": "Numero targa",
+    "POSIZIONE_TARGA": "Posizione targa",
+    "MARCA_VEICOLO": "Marca veicolo",
+    "MODELLO_VEICOLO": "Modello veicolo",
+    "COLORE_VEICOLO": "Colore veicolo",
+    "TELAIO_VEICOLO": "Telaio veicolo",
+    "DATA_SMARRIMENTO": "Data smarrimento",
+    "LUOGO_SMARRIMENTO": "Luogo smarrimento"
+  },
+  "DOMANDA": {
+    "COGNOME": "Cognome",
+    "NOME": "Nome",
+    "CODICE_FISCALE": "Codice fiscale",
+    "COMUNE_NASCITA": "Comune di nascita",
+    "PROVINCIA_NASCITA": "Provincia di nascita",
+    "STATO_NASCITA": "Stato di nascita",
+    "DATA_NASCITA": "Data di nascita",
+  
+    "INDIRIZZO_RESIDENZA": "Indirizzo di residenza",
+    "CIVICO_RESIDENZA": "Civico di residenza",
+    "COMUNE_RESIDENZA": "Comune di residenza",
+    "CAP_RESIDENZA": "CAP di residenza",
+    "PROVINCIA_RESIDENZA": "Provincia di residenza",
+  
+    "INDIRIZZO_DOMICILIO": "Indirizzo del domicilio",
+    "CIVICO_DOMICILIO": "Civico del domicilio",
+    "COMUNE_DOMICILIO": "Comune di domicilio",
+    "CAP_DOMICILIO": "CAP del domicilio",
+    "PROVINCIA_DOMICILIO": "Provincia del domicilio",
+  
+    "TELEFONO_FISSO": "Telefono fisso",
+    "CELLULARE": "Telefono cellulare",
+    "PEC": "PEC",
+    "EMAIL": "Email",
+  
+    "SEZIONE_CHIEDE": "CHIEDE",
+    "SEZIONE_CHIEDE_DESCR": "di essere iscritto nell’albo dei soggetti incaricati dall’autorità giudiziaria delle funzioni di gestione e di controllo delle procedure di cui al codice della crisi e dell’insolvenza. (N.B.: L’iscrizione della sezione ordinaria comporta l’automatica iscrizione nella sez. componenti OCRI)",
+    "SEZIONE_OPTION_1": ["Nella sezione ordinaria", "Nella sezione componenti degli organismi di composizione della crisi d’impresa – OCRI, di cui all’articolo 2, comma 1, lettera u), del Codice della crisi d’impresa e dell’insolvenza"],
+    "RUOLO_IN_QUANTO": "In quanto:",
+    "RUOLO_OPTION_2": [
+      "iscritto agli albi degli avvocati,  dei dottori commercialisti, degli esperti contabili o dei consulenti del lavoro",
+      "legale rappresentante della società tra professionisti",
+      "rappresentante dello studio professionale",
+      "ha svolto funzioni di amministrazione, direzione e controllo in società di capitali o società cooperative dando prova di adeguate capacità imprenditoriali"
+    ]
+  }
+}

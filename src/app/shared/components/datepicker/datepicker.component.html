@@ -1,0 +1,29 @@
+<div class="it-datepicker-wrapper" [ngClass]="{'theme-dark': dark === '',
+     'is-datepicker-valid': control.valid && control.value,
+     'is-datepicker-invalid': control.dirty && control.invalid}">
+  <div class="form-group" [ngClass]="{'datepicker-disabled': control.disabled || disabled}">
+    <input class="form-control it-date-datepicker" [formControl]="control" [id]="id" type="text" readonly
+           [placeholder]="placeholder | translate" [ngStyle]="{'cursor': control.disabled || disabled ? '' : 'default'}"
+           [attr.aria-describedby]="id + 'Note'">
+    <label [for]="id" [attr.aria-labelledby]="label | translate">
+      {{label | translate}}{{required === '' ? '*' : ''}}
+      <a *ngIf="info" data-container="body" data-toggle="popover" data-trigger="hover" data-placement="right" title="{{titlePopover}}" [attr.data-content]="textPopover">
+        <svg class="icon icon-primary icon-sm ml-2 mb-1">
+          <use xlink:href="./assets/svg/sprite.svg#it-info-circle"></use>
+        </svg>
+      </a></label>
+
+    <small *ngIf="!((control.dirty || ((control.value || control.value === 0) && control.touched)) && control.invalid ) " [id]="id + 'Note'" class="form-text text-muted">
+      <span *ngIf="!control.disabled">{{note | translate}}</span>
+      <svg  *ngIf="cancel && !control.disabled" class="icon icon-primary icon-xs ml-2 mb-1"  (click)="cancelDate()">
+        <use xlink:href="./assets/svg/sprite.svg#it-delete"  ></use>
+      </svg>
+    </small>
+
+    <small *ngIf="control.dirty || ((control.value || control.value === 0) && control.touched)" [id]="id + 'Note'" class="error-text form-text">
+      <span *ngIf="control.hasError('required')">{{"ERRORE.CAMPO_OBBL" | translate}}</span>
+      <span *ngIf="control.hasError('pattern')">{{"ERRORE.CAMPO_INVALIDO" | translate}}</span>
+      <span *ngIf="control.hasError('dateRange')">{{"ERRORE.ITERVALLO_DATE" | translate}}</span>
+    </small>
+  </div>
+</div>

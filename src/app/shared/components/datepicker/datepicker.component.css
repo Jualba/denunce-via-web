@@ -1,0 +1,19 @@
+::ng-deep .is-datepicker-valid .input-group:after {
+  height: 3px;
+}
+
+::ng-deep .is-datepicker-invalid .input-group:after {
+  background: #d9364f !important;
+  height: 3px;
+}
+
+.form-control:disabled, ::ng-deep .datepicker-disabled .input-group:after {
+  opacity: 0.65;
+}
+
+::ng-deep .it-datepicker-wrapper .datepicker-disabled .input-group .datepicker-button .icon,
+::ng-deep .it-datepicker-wrapper .datepicker-disabled .input-group .datepicker-button:hover .icon {
+  fill: #435a70;
+  opacity: 0.88;
+  cursor: not-allowed;
+}

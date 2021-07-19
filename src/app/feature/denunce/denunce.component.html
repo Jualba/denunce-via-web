@@ -1,0 +1,29 @@
+<div class="section section-muted section-1 p-0 pb-5">
+  <div class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h4 class="font-weight-bold mt-5">{{'DENUNCIA.MIE_DENUNCE' | translate}}</h4>
+          <p class="text">{{'DENUNCIA.DESCRIZIONE' | translate}}</p>
+        </div>
+      </div>
+      <app-complaint-list></app-complaint-list>
+      <div class="row">
+        <div class="col-12">
+          <div class="card-wrapper card-space">
+            <div class="card card-bg border-bottom-card">
+              <div class="card-body mt-3">
+                <h5 class="card-title">{{'DENUNCIA.SPORGI_DENUNCIA' | translate}}</h5>
+                <p class="card-text">{{'DENUNCIA.SPORGI_DENUNCIA_DESCR' | translate}}</p>
+              </div>
+              <div class="text-right mt-0" style="padding-right: 24px">
+                <button class="btn btn-outline-primary text-right" (click)="creaDenuncia()">
+                  {{'DENUNCIA.NUOVA_DENUNCIA' | translate}}</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

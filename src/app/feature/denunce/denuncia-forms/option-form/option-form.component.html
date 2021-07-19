@@ -1,0 +1,31 @@
+
+<div class="row justify-content-center">
+  <div class="col-md-12 col-12 py-1 pb-3">
+    <agid-checkbox [control]="form.get('cognome')" label="Nella sezione ordinaria" ></agid-checkbox>
+  </div>
+  <div class="col-md-12 col-12 py-1 pb-3">
+    <agid-checkbox [control]="form.get('nome')" [id]="'nome'"
+                label="Nella sezione componenti degli organismi di composizione della crisi d’impresa – OCRI, di cui
+                    all’articolo 2, comma 1, lettera u), del Codice della crisi d’impresa e dell’insolvenza" required></agid-checkbox>
+  </div>
+  <div class="col-md-12 col-12 py-1 pb-3" >(N.B.: L’iscrizione della sezione ordinaria comporta l’automatica iscrizione nella sez. componenti OCRI)</div>
+  <div class="col-md-12 col-12 py-1 pb-3" style="">In quanto</div>
+  <div class="col-md-12 col-12 py-1 pb-3">
+    <agid-checkbox [control]="form.get('nome')" [id]="'nome'"
+                   label="iscritto agli albi degli avvocati, dei dottori commercialisti, degli esperti contabili o dei consulenti del
+                    lavoro" required></agid-checkbox>
+  </div>
+  <div class="col-md-12 col-12 py-1 pb-3">
+    <agid-checkbox [control]="form.get('nome')" [id]="'nome'"
+                   label="legale rappresentante della società tra professionisti" required></agid-checkbox>
+  </div>
+  <div class="col-md-12 col-12 py-1 pb-3">
+    <agid-checkbox [control]="form.get('nome')" [id]="'nome'"
+                   label="rappresentante dello studio professionale;" required></agid-checkbox>
+  </div>
+  <div class="col-md-12 col-12 py-1 pb-3">
+    <agid-checkbox [control]="form.get('nome')" [id]="'nome'"
+                   label="ha svolto funzioni di amministrazione, direzione e controllo in società di capitali o società
+                    cooperative dando <br>prova di adeguate capacità imprenditoriali." required></agid-checkbox>
+  </div>
+</div>

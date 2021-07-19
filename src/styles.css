@@ -1,0 +1,51 @@
+/* You can add global styles to this file, and also import other style files */
+
+.error-text {
+  color: #d9364f;
+}
+
+.additional-magenta-bg {
+  background-color: #C828A4;
+}
+
+/*---- Table ----*/
+.agid-table .table-separate {
+  border-collapse: separate;
+  border-spacing: 0 16px;
+}
+
+.agid-table .table-th-no-border th {
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 1em;
+  padding-right: 1em;
+  border: 0 !important;
+}
+
+.agid-table .table-td-no-border td {
+  vertical-align: middle !important;
+  font-size: 16px;
+  font-weight: normal;
+  border: 0 !important;
+}
+.agid-table .table-td-no-border td .avatar-wrapper.avatar-extra-text {
+  vertical-align: middle;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.agid-table .table-td-no-border td .avatar-wrapper.avatar-extra-text .extra-text {
+  margin-left: 8px;
+}
+
+.agid-table .btn-table {
+  padding: 7px 24px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.agid-table .badge-table {
+  padding: 0.40em 0.8em;
+  border-radius: 6px;
+  font-size: 14px;
+}
