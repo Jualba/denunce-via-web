@@ -21,6 +21,10 @@ const routes: Routes = [
     loadChildren: () => import('./feature/domande-da-assegnare/domande-da-assegnare.module').then(m => m.DomandeDaAssegnareModule)
   },
   {
+    path: 'domande-da-validare',
+    loadChildren: () => import('./feature/domande-da-validare/domande-da-validare.module').then(m => m.DomandeDaValidareModule)
+  },
+  {
     path: 'domande-pdg-da-firmare',
     loadChildren: () => import('./feature/domande-pdg-da-firmare/domande-pdg-da-firmare.module').then(m => m.DomandePdgDaFirmareModule)
   },

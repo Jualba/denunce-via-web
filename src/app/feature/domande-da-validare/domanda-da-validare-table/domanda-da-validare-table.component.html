@@ -1,0 +1,28 @@
+<ng-container *ngIf="domandeList.length > 0">
+  <form formControlName="selectControl">
+    <div class="agid-table table-responsive">
+      <table class="table table-separate">
+        <thead class="table-sm table-th-no-border lightgrey-bg-c1 neutral-1-color-a7">
+          <tr class="text-uppercase">
+            <th scope="col">Data presentazione</th>
+            <th scope="col">Cognome e nome</th>
+            <th scope="col">Sezione</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let domanda of domandeList; index as i" class="table-td-no-border bg-white shadow-sm text-truncate">
+            <td>{{domanda?.data_presentazione || '-' | date }}</td>
+            <td>{{domanda?.nome || '-' }}</td>
+            <td>{{domanda?.sezione || '-' }}</td>
+            <td class="p-0">
+              <button class="btn btn-table btn-primary text-nowrap" (click)="valutaDomanda(domanda.id)">
+                {{'COMMON.VALUTA' | translate}}
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </form>
+</ng-container>

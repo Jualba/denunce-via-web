@@ -8,6 +8,7 @@
     "SALVA": "Salva",
     "ELIMINA": "Elimina",
     "DETTAGLIO": "Dettaglio",
+    "VALUTA":"Valuta",
     "CERCA": "Cerca",
     "CONTINUA": "Continua",
     "INDIETRO": "Indietro",
@@ -43,6 +44,9 @@
     "SCADENZARIO_PAGAMENTI": "Scadenzario pagamenti",
     "DOMANDE_DA_ASSEGNARE": "Domande da assegnare",
     "DOMANDE_PDG_DA_FIRMARE": "Domande PDG da firmare",
+    "DOMANDE_DA_VALIDARE": "Domande da validare",
+    "DOMANDE_VALIDATE": "Domande validate",
+
     "LE_MIE_DOMANDE": "Le mie domande",
     "CONSULTA_LELENECA_PUBBLICO": "Consulta L'eleneco pubblico",
     "ISTRUZIONI": "Istruzioni"
