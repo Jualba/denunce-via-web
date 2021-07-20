@@ -28,6 +28,10 @@ const routes: Routes = [
     path: 'domande-pdg-da-firmare',
     loadChildren: () => import('./feature/domande-pdg-da-firmare/domande-pdg-da-firmare.module').then(m => m.DomandePdgDaFirmareModule)
   },
+  {
+      path: 'mie-domande',
+      loadChildren: () => import('./feature/mie-domande/domande.module').then(m => m.DomandeModule)
+  },
   { path: 'home', component: HomeComponent }
 ];
 

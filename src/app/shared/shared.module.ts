@@ -10,6 +10,7 @@ import { InputComponent } from './components/input/input.component';
 import { SelectComponent } from './components/select/select.component';
 import { TextareaComponent } from './components/textarea/textarea.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { CheckboxComponent } from './components/checkbox/checkbox.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { DatepickerComponent } from './components/datepicker/datepicker.componen
     InputComponent,
     SelectComponent,
     TextareaComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    CheckboxComponent
   ],
   imports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { DatepickerComponent } from './components/datepicker/datepicker.componen
     SelectComponent,
     TextareaComponent,
     DatepickerComponent,
-    TranslateModule
+    TranslateModule,
+    CheckboxComponent
   ]
 })
 export class SharedModule { }

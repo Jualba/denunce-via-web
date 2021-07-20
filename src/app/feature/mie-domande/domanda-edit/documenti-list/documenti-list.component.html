@@ -1,0 +1,71 @@
+
+<!--  <div *ngIfMedia="'(min-width: 768px)'" class="agid-table table-responsive">-->
+    <table class="table table-separate" style=" word-break: break-all;">
+      <thead class="table-sm table-th-no-border lightgrey-bg-c1 neutral-1-color-a7">
+      <tr class="text-uppercase">
+        <th scope="col" style="width: 80%">Documenti</th>
+        <th scope="col">Sfoglia</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr class="table-td-no-border bg-white shadow-sm text-truncate">
+        <td style="width: 80%">certificazione (o dichiarazione sostitutiva ai sensi degli artt. 46 e 47 D.P.R. 445/2000) attestante
+          <br>l&#39;albo professionale presso il quale è iscritto e la data di iscrizione;</td>
+        <td class="p-9">
+          <button class="btn btn-table btn-primary text-nowrap">Sfoglia</button>
+
+          <button style="color:red;width:30px;font-size:53px;margin-top: -14px;margin-right: 25px;" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+      </tr>
+      <tr class="table-td-no-border bg-white shadow-sm text-truncate">
+        <td style="width: 80%">certificazione (o dichiarazione sostitutiva ai sensi degli artt. 46 e 47 D.P.R. 445/2000) di non avere
+          <br>subito provvedimenti disciplinari dall&#39;ordine professionale di appartenenza;</td>
+        <td class="p-9">
+          <button class="btn btn-table btn-primary text-nowrap">Sfoglia</button>
+          <button style="color:red;width:30px;font-size:53px;margin-top: -14px;margin-right: 25px;" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+      </tr>
+      <tr class="table-td-no-border bg-white shadow-sm text-truncate">
+        <td style="width: 80%">certificazione dell&#39;ordine di appartenenza (o dichiarazione sostitutiva ai sensi degli artt. 46 e 47
+          <br>D.P.R. 445/2000) di essere in regola con i crediti formativi professionali di cui agli obblighi previsti
+          <br>dal programma di formazione del medesimo ordine</td>
+        <td class="p-9">
+          <button class="btn btn-table btn-primary text-nowrap">Sfoglia</button>
+<!--          <agid-upload control="" label="upload"></agid-upload>-->
+          <button style="color:red;width:30px;font-size:53px;margin-top: -14px;margin-right: 25px;" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+      </tr>
+      <tr class="table-td-no-border bg-white shadow-sm text-truncate">
+        <td style="width: 80%">certificazione (o dichiarazione sostitutiva ai sensi degli artt. 46 e 47 D.P.R. 445/2000) comprovante
+          <br>l’assolvimento degli obblighi formativi di cui all’articolo 356, comma 2, primo e secondo periodo,
+          <br>del Codice della crisi d’impresa e dell’insolvenza</td>
+        <td class="p-9">
+          <button class="btn btn-table btn-primary text-nowrap">Sfoglia</button>
+          <button style="color:red;width:30px;font-size:53px;margin-top: -14px;margin-right: 25px;" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+      </tr>
+      <tr class="table-td-no-border bg-white shadow-sm text-truncate">
+        <td style="width: 80%">ogni altro documento idoneo a dimostrare il possesso dei requisiti di professionalità;</td>
+        <td class="p-9">
+          <button class="btn btn-table btn-primary text-nowrap">Sfoglia</button>
+          <button style="color:red;width:30px;font-size:53px;margin-top: -14px;margin-right: 25px;" type="button" class="close" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+<!--  </div>-->
+
+
+<div class="col-sm-12 text-center" *ngIf="noData">
+  <h6>{{ 'COMMON.NESSUN_DATO' | translate }} </h6>
+</div>

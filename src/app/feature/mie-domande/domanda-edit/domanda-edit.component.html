@@ -1,0 +1,79 @@
+<div class="section section-muted section-1 p-0 pb-5">
+  <div class="section-content">
+    <div class="container" style="background-color:white"  >
+      <div class="row instance-detail">
+        <div class="col-sm-12" >
+          <div class="tab-content p-4 bg-white" id="tabsFormDenuncia" *ngIf="isShown">
+           <h4><b>Domanda di Iscrizione</b></h4>
+            <p>La domanda deve essere presentata da una persona fisica che rappresenti il
+              legale rappresentante della società tra professionisti, ovvero i componenti dello studio
+              professionale associato.</p>
+            <div id="domandaContainer" class="tab-pane text-break pt-4 fade show active" role="tabpanel"
+                 aria-labelledby="tabFormTarga">
+              <form (ngSubmit)="inviaDenuncia(denunciaTargaForm)" [formGroup]="denunciaTargaForm" novalidate autocomplete="off">
+                <app-domanda-form [form]="denunciaTargaForm" [domanda]="domanda"></app-domanda-form>
+              </form>
+              <div class="section-2">
+                <hr style="height:10px;border-width:4px">
+                <h3 style="text-align: center;"><b>CHIEDE</b></h3>
+                <div class="row"><p class="text">di essere iscritto nell’albo dei soggetti incaricati dall’autorità giudiziaria delle funzioni di gestione e di
+                  controllo delle procedure di cui al codice della crisi e dell’insolvenza</p>
+                </div>
+                  <form (ngSubmit)="inviaDenuncia(denunciaTargaForm)" [formGroup]="denunciaTargaForm" novalidate autocomplete="off">
+                    <app-option-form [form]="denunciaTargaForm" [domanda]="domanda"></app-option-form>
+                  </form>
+
+              </div>
+
+          </div>
+            <div  class="d-flex flex-row-reverse">
+              <button [disabled]=""  (click)="toggleShow()"
+                      class="btn btn-primary btn-lg">Continua
+              </button>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+      <div class="row instance-detail"  *ngIf="!isShown">
+        <div class="col-sm-12" >
+      <div   class="tab-content p-4 bg-white" >
+          <div class="row" ><h4><b>Domanda di Iscrizione</b></h4><br></div>
+          <div class="tab-pane text-break pt-4 fade show active" >
+            Iscritto all’albo:<br>
+
+<!--            <input type="radio" value="avvocati" name="gender" ngModel>degli avvocati-->
+<!--            <input type="radio" value="avvocati" name="dottori" ngModel>dei dottori commercialisti e degli esperti contabili-->
+<!--            <input type="radio" value="avvocati" name="consulenti" ngModel>dei consulenti del lavoro-->
+
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
+              <label class="custom-control-label" for="defaultUnchecked">&nbsp;&nbsp;  degli avvocati</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultCheckedid" name="defaultExampleRadios"  mdbInput>
+              <label class="custom-control-label" for="defaultChecked"> &nbsp;&nbsp; dei dottori commercialisti e degli esperti contabili</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="defaultChecked" name="defaultExampleRadios"  mdbInput>
+              <label class="custom-control-label" for="defaultChecked">  &nbsp;&nbsp;dei consulenti del lavoro</label>
+            </div>
+
+          &nbsp;&nbsp;o &nbsp;&nbsp;di <input type="text" name="citta">dal data<br>
+            <div clas="row">
+              <h3 style="text-align: center;"><b>Allega</b></h3>
+              <div class="row" > certificazione (o dichiarazione sostitutiva ai sensi degli artt. 46 e 47 D.P.R. 445/2000) attestante
+              l&#39;albo professionale presso il quale è iscritto e la data di iscrizione; </div>
+
+              <app-documenti-list></app-documenti-list>
+            </div>
+            <div  class="d-flex flex-row-reverse">
+              <button [disabled]=""  (click)="toggleShow()"
+                      class="btn btn-primary btn-lg">Continua
+              </button>
+            </div>
+       </div>
+      </div>
+  </div>
+</div>
