@@ -43,10 +43,6 @@
           <div class="tab-pane text-break pt-4 fade show active" >
             Iscritto all’albo:<br>
 
-<!--            <input type="radio" value="avvocati" name="gender" ngModel>degli avvocati-->
-<!--            <input type="radio" value="avvocati" name="dottori" ngModel>dei dottori commercialisti e degli esperti contabili-->
-<!--            <input type="radio" value="avvocati" name="consulenti" ngModel>dei consulenti del lavoro-->
-
             <div class="custom-control custom-radio">
               <input type="radio" class="custom-control-input" id="defaultUnchecked" name="defaultExampleRadios" mdbInput>
               <label class="custom-control-label" for="defaultUnchecked">&nbsp;&nbsp;  degli avvocati</label>
@@ -60,7 +56,21 @@
               <label class="custom-control-label" for="defaultChecked">  &nbsp;&nbsp;dei consulenti del lavoro</label>
             </div>
 
-          &nbsp;&nbsp;o &nbsp;&nbsp;di <input type="text" name="citta">dal data<br>
+           <div class="row">
+            <div class="col-md-4 col-12 py-1 pb-3" >
+              <label>Citta</label>
+             <input type="text">
+            </div>
+             <div class="col-md-2 col-12 py-1 pb-3" style="text-align:center" >
+               <label>del</label>
+
+             </div>
+
+            <div class="col-md-4 col-12 py-1 pb-3">
+              <label>Data</label>
+              <input type="text">
+            </div>
+           </div>
             <div clas="row">
               <h3 style="text-align: center;"><b>Allega</b></h3>
               <div class="row" > certificazione (o dichiarazione sostitutiva ai sensi degli artt. 46 e 47 D.P.R. 445/2000) attestante

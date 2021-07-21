@@ -11,6 +11,7 @@ import { SelectComponent } from './components/select/select.component';
 import { TextareaComponent } from './components/textarea/textarea.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { UploadComponent } from './components/upload/upload.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
     SelectComponent,
     TextareaComponent,
     DatepickerComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    UploadComponent
   ],
   imports: [
     CommonModule,
@@ -39,7 +41,9 @@ import { CheckboxComponent } from './components/checkbox/checkbox.component';
     TextareaComponent,
     DatepickerComponent,
     TranslateModule,
-    CheckboxComponent
+    CheckboxComponent,
+    UploadComponent
+
   ]
 })
 export class SharedModule { }
