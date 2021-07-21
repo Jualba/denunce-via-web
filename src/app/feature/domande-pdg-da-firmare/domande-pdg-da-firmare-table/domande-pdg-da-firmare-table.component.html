@@ -1,4 +1,31 @@
-<ng-container *ngIf="domandeList.length > 0">
+<ng-container>
+
+  <div class="row">
+    <form class="mt-5">
+      <div class="row">
+        <h3>Dashboard</h3>
+        <hr />
+      </div>
+      <div class="form">
+        <div class="input-inline mb-2">
+          <strong class="col-4 mr-4">Ricerca</strong>
+        </div>
+      </div>
+      <div class="form">
+        <div class="input-inline mb-2">
+          <strong class="col-4 mr-4">Cognome</strong>
+          <input type="text" class="col-8" id="cognome" (change) ="onCognomeChange($event)">
+        </div>
+      </div>
+      <div class="form">
+        <div class="input-inline mb-2">
+          <strong class="col-4 mr-4">Sezione</strong>
+          <input type="text" class="col-8" id="sezione" (change) ="onSezioneChange($event)">
+        </div>
+      </div>
+    </form>
+  </div>
+
   <form>
     <div class="agid-table table-responsive">
       <table class="table table-separate">
@@ -6,7 +33,7 @@
           <tr class="text-uppercase">
             <th scope="col">Data iscrizione</th>
             <th scope="col">Cognome e nome</th>
-            <th scope="col">Stato</th>
+            <th scope="col">Sezione</th>
             <th scope="col"></th>
             <th scope="col">PDG</th>
             <th scope="col">Firma</th>
@@ -16,7 +43,7 @@
           <tr *ngFor="let domanda of domandeList; index as i" class="table-td-no-border bg-white shadow-sm text-truncate">
             <td>{{domanda?.data_iscrizione || '-' | date }}</td>
             <td>{{domanda?.nome || '-' }}</td>
-            <td>{{domanda?.stato || '-' }}</td>
+            <td>{{domanda?.sezione || '-' }}</td>
           
             <td class="p-0">
               <button class="btn btn-table btn-primary text-nowrap" (click)="dettaglioDomanda(domanda.id)">
