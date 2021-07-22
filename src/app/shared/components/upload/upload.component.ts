@@ -1,6 +1,6 @@
 import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { AbstractControl, FormControl } from '@angular/forms';
-import { UploadService } from './upload.service';
+// import { UploadService } from './upload.service';
 import { catchError, takeUntil } from 'rxjs/operators';
 import { fromEvent, Observable, Subject, throwError } from 'rxjs';
 import { environment } from '../../../../environments/environment';
@@ -8,6 +8,7 @@ import { DownloadService } from '../../services/download.service';
 import { HttpRequest, HttpEventType, HttpResponse ,HttpClient} from '@angular/common/http';
 import { Subscription, } from 'rxjs';
 import { finalize } from 'rxjs/operators';
+import {APP_BASE_HREF} from '@angular/common';
 
 declare var $: any;
 
@@ -34,9 +35,9 @@ export class UploadComponent {
         if (file) {
             this.fileName = file.name;
             const formData = new FormData();
-            formData.append("thumbnail", file);
+            formData.append("file", file);
 
-            const upload$ = this.http.post("/api/thumbnail-upload", formData, {
+            const upload$ = this.http.post("./out-tsc/app", formData, {
                 reportProgress: true,
                 observe: 'events'
             })

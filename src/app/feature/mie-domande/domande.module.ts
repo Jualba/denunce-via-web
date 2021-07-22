@@ -11,6 +11,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { DomandeListComponent } from './domande-list/domande-list.component';
 import { DomandeComponent } from './domande.component';
 import { DomandeRoutingModule } from './domande-routing.module';
+import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 
 
 
@@ -29,7 +30,7 @@ import { DomandeRoutingModule } from './domande-routing.module';
     CommonModule,
     SharedModule,
     TranslateModule,
-    ReactiveFormsModule,DomandeRoutingModule
+    ReactiveFormsModule,DomandeRoutingModule,AutocompleteLibModule
   ]
 })
 export class DomandeModule { }

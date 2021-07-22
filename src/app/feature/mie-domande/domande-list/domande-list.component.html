@@ -1,6 +1,6 @@
 <!-- Versione desktop - Tabella -->
-<ng-container >
-  <div *ngIfMedia="'(min-width: 768px)'" class="agid-table table-responsive">
+<ng-container *ngIf="domanda?.length">
+  <div class="agid-table table-responsive">
     <table class="table table-separate">
       <thead class="table-sm table-th-no-border lightgrey-bg-c1 neutral-1-color-a7">
       <tr class="text-uppercase">
@@ -15,70 +15,17 @@
         <td>{{dom?.idDomanda || '-' }}</td>
         <td>{{dom?.nome || '-' }}</td>
         <td>{{dom?.cognome || '-' }}</td>
-
         <td class="p-0">
-          <button class="btn btn-table btn-primary text-nowrap"
-                  >
-            Approvata</button>
+          <button class="btn btn-table btn-primary text-nowrap">Approvata</button>
         </td>
       </tr>
       </tbody>
     </table>
   </div>
-
-  <!-- Versione mobile - Cards -->
-  <ng-container *ngIfMedia="'(max-width: 767px)'">
-    <ng-container *ngFor="let de of domanda">
-      <div class="card-wrapper card-space">
-        <div class="card card-bg no-after">
-          <div class="card-body agid-table table-responsive px-3 pt-3 pb-0">
-            <table class="table table-sm table-th-no-border table-td-no-border">
-              <thead>
-              <tr>
-                <th></th>
-                <th></th>
-              </tr>
-              </thead>
-              <tbody>
-              <tr>
-                <th scope="row" class="text-uppercase neutral-1-color">{{'DENUNCIA.TIPO_DENUNCIA' | translate}}</th>
-                <td class="text-truncate text-right">
-                 </td>
-              </tr>
-              <tr>
-                <th scope="row"
-                    class="text-uppercase neutral-1-color">{{'DENUNCIA.DATA_INSERIMENTO' | translate}}</th>
-                <td
-                  class="text-truncate text-right"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-uppercase neutral-1-color">{{'DENUNCIA.COMMISSARIATO' | translate}}</th>
-                <td
-                  class="text-truncate text-right"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="text-uppercase neutral-1-color">{{'DENUNCIA.SCARICA_ATTO' | translate}}</th>
-                <td class="text-right">
-                  <a href="#" (click)="downloadAtto()" role="button" type="button">
-                    <svg class="icon icon-primary">
-                      <use xlink:href="./assets/svg/sprite.svg#it-file"></use>
-                    </svg>
-                  </a>
-                </td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <button class="btn btn-table btn-primary mx-4 mb-2" >
-            {{'COMMON.DETTAGLIO' | translate}}
-          </button>
-        </div>
-      </div>
-    </ng-container>
-  </ng-container>
 </ng-container>
 
-<div class="col-sm-12 text-center" *ngIf="noData">
-  <h6>{{ 'COMMON.NESSUN_DATO' | translate }} </h6>
+<div class="col-sm-12 text-center" *ngIf="domanda?.length <= 0">
+  <h6>{{ 'COMMON.NESSUN_DATO' | translate }}</h6>
 </div>
+
 

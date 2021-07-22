@@ -1,8 +1,9 @@
-<input type="file" class="file-input"
-       [accept]="requiredFileType"
-       (change)="onFileSelected($event)" #fileUpload>
+
 
 <div class="file-upload">
+  <input type="file" class="file-input"
+         [accept]="requiredFileType"
+         (change)="onFileSelected($event)" #fileUpload>
 
   <p > {{fileName || "No file uploaded yet."}}</p>
 
@@ -19,10 +20,10 @@
     <span aria-hidden="true">&times;</span>
   </button>
 
-<!--  <mat-progress-bar class="progress-bar" mode="determinate"-->
-<!--                    [value]="uploadProgress" *ngIf="uploadProgress">-->
+  <button class="progress-bar" mode="determinate"
+                    [value]="uploadProgress" *ngIf="uploadProgress">
 
-<!--  </mat-progress-bar>-->
+  </button>
 
 <!--  <mat-icon class="cancel-upload" (click)="cancelUpload()"-->
 <!--            *ngIf="uploadProgress">delete_forever</mat-icon>-->

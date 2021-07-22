@@ -26,14 +26,14 @@ export class DomandaService {
   mockListaDomanda(): Domanda[] {
       return [
       {
-              idDomanda: '',
-              cognome: '',
-               nome: '',
-               codiceFiscale:  '',
-               comuneNascita:  '',
-               provinciaNascita:  '',
-               statoNascita:  '',
-               dataNascita:  '',
+              idDomanda: '1',
+              cognome: 'Casteli',
+               nome: 'Marko',
+               codiceFiscale:  '234345',
+               comuneNascita:  'Torino',
+               provinciaNascita:  'Torino',
+               statoNascita:  'Torino',
+               dataNascita:  '03/06/1989',
 
                indirizzoResidenza:  '',
                civicoResidenza:  '',
