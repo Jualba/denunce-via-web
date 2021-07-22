@@ -12,7 +12,7 @@ import { DomandeListComponent } from './domande-list/domande-list.component';
 import { DomandeComponent } from './domande.component';
 import { DomandeRoutingModule } from './domande-routing.module';
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
-
+import { DomadeDiIscrizioneComponent } from './domade-di-iscrizione/domade-di-iscrizione.component';
 
 
 
@@ -24,7 +24,8 @@ import {AutocompleteLibModule} from 'angular-ng-autocomplete';
   DomandaFormComponent,
   OptionFormComponent,
   DomandeListComponent,
-  DomandeComponent
+  DomandeComponent,
+  DomadeDiIscrizioneComponent
   ],
   imports: [
     CommonModule,

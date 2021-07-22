@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DomandeComponent } from './domande.component';
 import { DomandaEditComponent } from './domanda-edit/domanda-edit.component';
 import { DomandaDetailComponent } from './domanda-detail/domanda-detail.component';
+import { DomadeDiIscrizioneComponent } from './domade-di-iscrizione/domade-di-iscrizione.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: 'crea',
     component: DomandaEditComponent
   },
+  {
+      path: 'domanda-di-iscrizione',
+      component: DomadeDiIscrizioneComponent
+    },
   {
     path: 'dettaglio/:id',
     component: DomandaDetailComponent

@@ -95,4 +95,8 @@ export class DomandaEditComponent implements OnInit,OnChanges, OnDestroy {
       onFocused(e){
         // do something when input is focused
       }
+
+      continueDomanda() {
+            this.router.navigate(['/mie-domande/domanda-di-iscrizione']).then();
+          }
 }

@@ -1,0 +1,49 @@
+
+<div class="section section-muted section-1 p-0 pb-5" >
+  <div class="section-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div style="height:30px"></div>
+          <p class="text"><b>Domanda di iscrizione - Aggiunta opsionale dei soci</b></p>
+        </div>
+      </div>
+
+
+<ng-container *ngIf="domanda?.length">
+  <div class="agid-table table-responsive">
+    <table class="table table-separate">
+      <thead class="table-sm table-th-no-border lightgrey-bg-c1 neutral-1-color-a7">
+      <tr class="text-uppercase">
+        <th scope="col">SOCIO</th>
+        <th scope="col">DATA DI NASCITA</th>
+        <th scope="col"></th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let dom of domanda" class="table-td-no-border bg-white shadow-sm text-truncate">
+        <td>{{dom?.nome || '-' }}</td>
+        <td>{{dom?.dataNascita || '-' }}</td>
+        <td class="p-0">
+          <button class="btn btn-table btn-primary text-nowrap">Detagglio</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+      <div class="row" style="float:right">
+
+        <div class="col-md-12 col-12 py-1 pb-3" >
+          <button class="btn btn-table btn-primary text-nowrap" style="margin-right: 10px;">Termina</button>
+
+          <button class="btn btn-table btn-primary text-nowrap">Aggiungi nuovo Socio</button>
+        </div>
+      </div>
+
+
+<div class="col-sm-12 text-center" *ngIf="domanda?.length <= 0">
+  <h6>{{ 'COMMON.NESSUN_DATO' | translate }}</h6>
+</div>
+
+    </div></div></div>

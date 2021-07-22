@@ -19,7 +19,7 @@ export class DomandeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  creaDenuncia() {
+  creaDomanda() {
     this.router.navigate(['/mie-domande/crea']).then();
   }
 }
