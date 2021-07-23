@@ -42,8 +42,10 @@ export class DomandaDaValidareTableComponent implements OnInit {
 
 
   valutaDomanda(e) {
-   $('#valutazioneDomandaModal').modal('show');
-   e.preventDefault();
+ 
+   //$('#valutazioneDomandaModal').modal('show');
+   //e.preventDefault();
+   
   }
 
 }
