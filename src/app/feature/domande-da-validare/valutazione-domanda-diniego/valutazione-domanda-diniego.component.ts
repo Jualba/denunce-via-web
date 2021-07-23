@@ -11,7 +11,6 @@ export class ValutazioneDomandaDiniegoComponent implements OnInit {
   form: FormGroup;
 
   constructor(private formBuilder: FormBuilder) { 
-    
   }
 
   ngOnInit() {

@@ -16,7 +16,7 @@
             <td>{{domanda?.nome || '-' }}</td>
             <td>{{domanda?.sezione || '-' }}</td>
             <td class="p-0">
-              <button class="btn btn-table btn-primary text-nowrap" (click)="valutaDomanda(domanda.id)">
+              <button class="btn btn-table btn-primary text-nowrap"  (click)="valutaDomanda($event)" data-backdrop="false">
                 {{'COMMON.VALUTA' | translate}}
               </button>
             </td>
@@ -27,7 +27,7 @@
   </form>
 </ng-container>
 
-<div class="modal" tabindex="-1" role="dialog" id="valutazioneDomandaModal">
+<div class="modal" tabindex="-1" role="dialog" id="valutazioneDomandaModal" autofocus>
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-header">

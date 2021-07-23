@@ -14,8 +14,6 @@ export class ValutazioneDomandaComponent implements OnInit {
 
   descriptionList = [];
 
-  posizioniTarga: any[] = [];
-
   constructor(private formBuilder: FormBuilder,
               private router: Router) { 
     
