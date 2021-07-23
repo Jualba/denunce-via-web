@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $: any;
+
 @Component({
   selector: 'app-domanda-da-validare-table',
   templateUrl: './domanda-da-validare-table.component.html',
@@ -8,6 +10,9 @@ import { Component, OnInit } from '@angular/core';
 export class DomandaDaValidareTableComponent implements OnInit {
 
   domandeList = [];
+
+  posizioniTarga: any[] = [];
+
   constructor() { }
 
   ngOnInit() {
@@ -31,13 +36,14 @@ export class DomandaDaValidareTableComponent implements OnInit {
           data_presentazione: new Date(),
           sezione: 'Iscritto'
         },
-      )
-    }, 200)
-
+      );
+    }, 50);
   }
 
-  valutaDomanda(id) {
 
+  valutaDomanda(e) {
+   $('#valutazioneDomandaModal').modal('show');
+   e.preventDefault();
   }
 
 }

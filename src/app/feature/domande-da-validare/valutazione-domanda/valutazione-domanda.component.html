@@ -1,0 +1,168 @@
+<div class="section section-muted section-1 p-0 pb-5">
+  <div class="section-content">
+    <div class="container" style="background-color:white"  >
+      <div class="row instance-detail">
+        <div class="col-sm-12" >
+          <div class="tab-content p-4 bg-white" >
+           <h4><b>Domanda di Iscrizione</b></h4>
+            <div id="domandaContainer" class="tab-pane text-break pt-4 fade show active" role="tabpanel"
+                 aria-labelledby="tabFormTarga">
+                 <form [formGroup]="form" novalidate autocomplete="off">
+                 <div class="row justify-content-center">
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('cognome')" [id]="'cognome'"
+                                label="DOMANDA.COGNOME" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                  <agid-input [control]="form.get('nome')" [id]="'nome'"
+                              label="DOMANDA.NOME" required></agid-input>
+                </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('codiceFiscale')" [id]="'codiceFiscale'"
+                                label="DOMANDA.CODICE_FISCALE" required></agid-input>
+                  </div>
+                </div>
+                
+                <div class="row justify-content-center">
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('comuneNascita')" [id]="'comuneNascita'"
+                                label="DOMANDA.COMUNE_NASCITA" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('provinciaNascita')" [id]="'provinciaNascita'"
+                                label="DOMANDA.PROVINCIA_NASCITA" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('statoNascita')" [id]="'statoNascita'"
+                                label="DOMANDA.STATO_NASCITA" required></agid-input>
+                  </div>
+                
+                </div>
+                
+                <div class="row justify-content-center">
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-datepicker [control]="form.get('dataNascita')" [id]="'dataNascita'"
+                                     label="DOMANDA.DATA_NASCITA" max="today" required></agid-datepicker>
+                
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('indirizzoResidenza')" [id]="'indirizzoResidenza'"
+                                label="DOMANDA.INDIRIZZO_RESIDENZA" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('civicoResidenza')" [id]="'civicoResidenza'"
+                                label="DOMANDA.CIVICO_RESIDENZA" required></agid-input>
+                  </div>
+                
+                
+                </div>
+                
+                <div class="row justify-content-center">
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('comuneResidenza')" [id]="'comuneResidenza'"
+                                label="DOMANDA.COMUNE_RESIDENZA" required></agid-input>
+                  </div>
+                
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('capResidenza')" [id]="'capResidenza'"
+                                label="DOMANDA.CAP_RESIDENZA" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('provinciaResidenza')" [id]="'provinciaResidenza'"
+                                label="DOMANDA.PROVINCIA_RESIDENZA" required></agid-input>
+                  </div>
+                
+                </div>
+                
+                <div class="row justify-content-center">
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('indirizzoDomicilio')" [id]="'indirizzoDomicilio'"
+                                label="DOMANDA.INDIRIZZO_DOMICILIO" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('civicoDomicilio')" [id]="'civicoDomicilio'"
+                                label="DOMANDA.CIVICO_DOMICILIO" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('comuneDomicilio')" [id]="'comuneDomicilio'"
+                                label="DOMANDA.COMUNE_DOMICILIO" required></agid-input>
+                  </div>
+                
+                </div>
+                
+                <div class="row justify-content-center">
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('capDomicilio')" [id]="'capDomicilio'"
+                                label="DOMANDA.CAP_DOMICILIO" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('provinciaDomicilio')" [id]="'provinciaDomicilio'"
+                                label="DOMANDA.PROVINCIA_DOMICILIO" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('telefonoFisso')" [id]="'telefonoFisso'"
+                                label="DOMANDA.TELEFONO_FISSO" required></agid-input>
+                  </div>
+                
+                </div>
+                
+                <div class="row justify-content-center">
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('cellulare')" [id]="'cellulare'"
+                                label="DOMANDA.CELLULARE" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('pec')" [id]="'pec'"
+                                label="DOMANDA.PEC" required></agid-input>
+                  </div>
+                  <div class="col-md-4 col-12 py-1 pb-3">
+                    <agid-input [control]="form.get('email')" [id]="'email'"
+                                label="DOMANDA.EMAIL" required></agid-input>
+                  </div>
+                
+                </div>
+               </form>
+
+               <div class="section-2">
+                <table class="table" style=" word-break: break-all;">
+                  <thead class="table-sm table-th-no-border lightgrey-bg-c1 neutral-1-color-a7">
+                  <tr class="text-uppercase">
+                    <th scope="col" style="width: 80%">Documenti</th>
+                    <th scope="col">Sfoglia</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let document of documentList; index as i" class="table-td-no-border bg-white shadow-sm text-truncate">
+                      <td>{{document?.note}}</td>
+                    
+                      <td class="p-0">
+                        <button class="btn btn-table btn-primary text-nowrap" (click)="download(document.id)">
+                          Download
+                        </button>
+                      </td>                                    
+                    </tr>
+                  </tbody>
+                </table>
+
+              </div>
+                
+                  <div class="row justify-content-center">
+                      <div class="col-md-4 col-12 py-1 pb-3">
+                          <button class="btn btn-primary btn-sm" style="background-color:#7FFFD4;" type="button">Approva</button>
+                      </div>
+                      <div class="col-md-4 col-12 py-1 pb-3">
+                          <button class="btn btn-primary btn-sm" type="button">Diniego</button>
+                      </div>
+                      <div class="col-md-4 col-12 py-1 pb-3">
+                          <button class="btn btn-primary btn-sm" type="button">Richiesta integrazione</button>
+                      </div>
+                  </div>
+      </div>
+
+    </div>
+
+      
+  </div>
+</div>
+
+</div>
