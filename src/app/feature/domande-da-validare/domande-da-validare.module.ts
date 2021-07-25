@@ -7,6 +7,8 @@ import { DomandaDaValidareTableComponent } from './domanda-da-validare-table/dom
 import { ValutazioneDomandaComponent } from './valutazione-domanda/valutazione-domanda.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ValutazioneDomandaDiniegoComponent } from './valutazione-domanda-diniego/valutazione-domanda-diniego.component';
+import { ValutazioneDomandaRichiestaIntegrazioneComponent } from './valutazione-domanda-richiesta-integrazione/valutazione-domanda-richiesta-integrazione.component';
 
 @NgModule({
   imports: [
@@ -19,7 +21,9 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [
     DomandeDaValidareComponent, 
     DomandaDaValidareTableComponent, 
-    ValutazioneDomandaComponent
+    ValutazioneDomandaComponent,
+    ValutazioneDomandaDiniegoComponent,
+    ValutazioneDomandaRichiestaIntegrazioneComponent
   ]
 })
 export class DomandeDaValidareModule { }

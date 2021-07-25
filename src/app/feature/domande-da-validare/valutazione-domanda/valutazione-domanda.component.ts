@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-valutazione-domanda',
@@ -13,9 +14,8 @@ export class ValutazioneDomandaComponent implements OnInit {
 
   descriptionList = [];
 
-  posizioniTarga: any[] = [];
-
-  constructor(private formBuilder: FormBuilder) { 
+  constructor(private formBuilder: FormBuilder,
+              private router: Router) { 
     
   }
 
@@ -71,6 +71,18 @@ export class ValutazioneDomandaComponent implements OnInit {
 
   download(id): void {
 
+  }
+
+  approva(): void {
+    
+  }
+
+  diniego(): void {
+    this.router.navigate(['/domande-da-validare/valutazione-domanda-diniego']).then();
+  }
+
+  richiestaIntegrazione(): void {
+    this.router.navigate(['/domande-da-validare/valutazione-domanda-richiesta-integrazione']).then();
   }
 
 }
