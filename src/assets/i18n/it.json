@@ -5,10 +5,10 @@
     "GOVERNO_ITALIANO": "Governo Italiano",
     "SCEGLI_OPZIONE": "Scegli una opzione",
     "ANNULLA": "Annulla",
+    "VALUTA":"Valuta",
     "SALVA": "Salva",
     "ELIMINA": "Elimina",
     "DETTAGLIO": "Dettaglio",
-    "VALUTA":"Valuta",
     "CERCA": "Cerca",
     "CONTINUA": "Continua",
     "INDIETRO": "Indietro",
@@ -40,16 +40,15 @@
     "CIAO": "Ciao",
     "DENUNCE": "Denunce",
     "HOME": "Home",
+    "LE_MIE_DOMANDE": "Le mie domande",
+    "CONSULTA_LELENECA_PUBBLICO": "Consulta L'eleneco pubblico",
+    "ISTRUZIONI": "Istruzioni",
+    "DOMANDE_DA_VALIDARE": "Domande da validare",
+    "DOMANDE_VALIDATE": "Domande validate",
     "DOMANDE_DI_ISCRIZIONE": "Domande di iscrizione",
     "SCADENZARIO_PAGAMENTI": "Scadenzario pagamenti",
     "DOMANDE_DA_ASSEGNARE": "Domande da assegnare",
-    "DOMANDE_PDG_DA_FIRMARE": "Domande PDG da firmare",
-    "DOMANDE_DA_VALIDARE": "Domande da validare",
-    "DOMANDE_VALIDATE": "Domande validate",
-
-    "LE_MIE_DOMANDE": "Le mie domande",
-    "CONSULTA_LELENECA_PUBBLICO": "Consulta L'eleneco pubblico",
-    "ISTRUZIONI": "Istruzioni"
+    "DOMANDE_PDG_DA_FIRMARE": "Domande PDG da firmare"
   },
   "FOOTER": {
     "CONTATTI": "Contatti",
@@ -84,5 +83,42 @@
     "TELAIO_VEICOLO": "Telaio veicolo",
     "DATA_SMARRIMENTO": "Data smarrimento",
     "LUOGO_SMARRIMENTO": "Luogo smarrimento"
+  },
+  "DOMANDA": {
+    "COGNOME": "Cognome",
+    "NOME": "Nome",
+    "CODICE_FISCALE": "Codice fiscale",
+    "COMUNE_NASCITA": "Comune di nascita",
+    "PROVINCIA_NASCITA": "Provincia di nascita",
+    "STATO_NASCITA": "Stato di nascita",
+    "DATA_NASCITA": "Data di nascita",
+
+    "INDIRIZZO_RESIDENZA": "Indirizzo di residenza",
+    "CIVICO_RESIDENZA": "Civico di residenza",
+    "COMUNE_RESIDENZA": "Comune di residenza",
+    "CAP_RESIDENZA": "CAP di residenza",
+    "PROVINCIA_RESIDENZA": "Provincia di residenza",
+
+    "INDIRIZZO_DOMICILIO": "Indirizzo del domicilio",
+    "CIVICO_DOMICILIO": "Civico del domicilio",
+    "COMUNE_DOMICILIO": "Comune di domicilio",
+    "CAP_DOMICILIO": "CAP del domicilio",
+    "PROVINCIA_DOMICILIO": "Provincia del domicilio",
+
+    "TELEFONO_FISSO": "Telefono fisso",
+    "CELLULARE": "Telefono cellulare",
+    "PEC": "PEC",
+    "EMAIL": "Email",
+
+    "SEZIONE_CHIEDE": "CHIEDE",
+    "SEZIONE_CHIEDE_DESCR": "di essere iscritto nell’albo dei soggetti incaricati dall’autorità giudiziaria delle funzioni di gestione e di controllo delle procedure di cui al codice della crisi e dell’insolvenza. (N.B.: L’iscrizione della sezione ordinaria comporta l’automatica iscrizione nella sez. componenti OCRI)",
+    "SEZIONE_OPTION_1": ["Nella sezione ordinaria", "Nella sezione componenti degli organismi di composizione della crisi d’impresa – OCRI, di cui all’articolo 2, comma 1, lettera u), del Codice della crisi d’impresa e dell’insolvenza"],
+    "RUOLO_IN_QUANTO": "In quanto:",
+    "RUOLO_OPTION_2": [
+      "iscritto agli albi degli avvocati,  dei dottori commercialisti, degli esperti contabili o dei consulenti del lavoro",
+      "legale rappresentante della società tra professionisti",
+      "rappresentante dello studio professionale",
+      "ha svolto funzioni di amministrazione, direzione e controllo in società di capitali o società cooperative dando prova di adeguate capacità imprenditoriali"
+    ]
   }
 }
