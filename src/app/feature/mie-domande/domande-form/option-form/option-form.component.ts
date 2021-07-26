@@ -13,6 +13,7 @@ export class OptionFormComponent implements OnInit {
 
   @Input() domanda: Domanda;
   @Input() form: FormGroup;
+  radioSelected :string;
 
   posizioniTarga: any[] = [];
   destroy$ = new Subject<boolean>()

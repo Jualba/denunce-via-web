@@ -32,6 +32,7 @@ export class DomandaEditComponent implements OnInit,OnChanges, OnDestroy {
   denunciaTitoliForm: FormGroup;
   denunciaArmiForm: FormGroup;
   denunciaAltroForm: FormGroup;
+  selected:string;
   destroy$ = new Subject<boolean>();
 
   constructor(private router: Router, private route: ActivatedRoute, private fb: FormBuilder) {
@@ -73,30 +74,7 @@ export class DomandaEditComponent implements OnInit,OnChanges, OnDestroy {
   this.isShown = false;
   }
 
-  keyword = 'citta';
-    datas = [
-       {
-         citta: 'Firenze'
-       },
-       {
-         citta: 'Torino'
-       }
-    ];
 
-     selectEvent(item) {
-        // do something with selected item
-      }
 
-      onChangeSearch(val: string) {
-        // fetch remote data from here
-        // And reassign the 'data' which is binded to 'data' property.
-      }
 
-      onFocused(e){
-        // do something when input is focused
-      }
-
-      continueDomanda() {
-            this.router.navigate(['/mie-domande/domanda-di-iscrizione']).then();
-          }
 }
