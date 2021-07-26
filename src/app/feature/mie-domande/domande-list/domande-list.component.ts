@@ -41,4 +41,8 @@ export class DomandeListComponent implements OnInit, OnDestroy {
     // TODO download atto
     return false;
   }
+
+  modify(id: string): void {
+    this.router.navigate(['/mie-domande/crea']).then();
+  }
 }
