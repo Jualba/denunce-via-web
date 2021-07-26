@@ -20,7 +20,7 @@
                   controllo delle procedure di cui al codice della crisi e dell’insolvenza</p>
                 </div>
                   <form (ngSubmit)="inviaDenuncia(denunciaTargaForm)" [formGroup]="denunciaTargaForm" novalidate autocomplete="off">
-                    <app-option-form [form]="denunciaTargaForm" [domanda]="domanda"></app-option-form>
+                    <app-option-form ></app-option-form>
                   </form>
 
               </div>
@@ -86,13 +86,8 @@
                                label="Data" max="today" required></agid-datepicker>
             </div>
            </div>
-            <div clas="row">
-              <h3 style="text-align: center;"><b>Allega</b></h3>
-              <div class="row" > certificazione (o dichiarazione sostitutiva ai sensi degli artt. 46 e 47 D.P.R. 445/2000) attestante
-              l&#39;albo professionale presso il quale è iscritto e la data di iscrizione; </div>
 
               <app-documenti-list></app-documenti-list>
-            </div>
             <div  class="d-flex flex-row-reverse">
               <button [disabled]=""  (click)="continueDomanda()"
                       class="btn btn-primary btn-lg">Continua

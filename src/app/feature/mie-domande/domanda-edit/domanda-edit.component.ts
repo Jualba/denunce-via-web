@@ -32,6 +32,7 @@ export class DomandaEditComponent implements OnInit,OnChanges, OnDestroy {
   denunciaTitoliForm: FormGroup;
   denunciaArmiForm: FormGroup;
   denunciaAltroForm: FormGroup;
+  selected:string;
   destroy$ = new Subject<boolean>();
 
   constructor(private router: Router, private route: ActivatedRoute, private fb: FormBuilder) {
