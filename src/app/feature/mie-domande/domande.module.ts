@@ -14,6 +14,7 @@ import { DomandeRoutingModule } from './domande-routing.module';
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 import { DomadeDiIscrizioneComponent } from './domade-di-iscrizione/domade-di-iscrizione.component';
 import { DomandeSectionCComponent } from './domande-section-c/domande-section-c.component';
+import { DomandeSectionAComponent } from './domande-section-a/domande-section-a.component';
 
 
 
@@ -27,7 +28,8 @@ import { DomandeSectionCComponent } from './domande-section-c/domande-section-c.
   DomandeListComponent,
   DomandeComponent,
   DomadeDiIscrizioneComponent,
-  DomandeSectionCComponent
+  DomandeSectionCComponent,
+  DomandeSectionAComponent
   ],
   imports: [
     CommonModule,

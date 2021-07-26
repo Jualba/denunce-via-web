@@ -5,6 +5,7 @@ import { DomandaEditComponent } from './domanda-edit/domanda-edit.component';
 import { DomandaDetailComponent } from './domanda-detail/domanda-detail.component';
 import { DomadeDiIscrizioneComponent } from './domade-di-iscrizione/domade-di-iscrizione.component';
 import { DomandeSectionCComponent } from './domande-section-c/domande-section-c.component';
+import { DomandeSectionAComponent } from './domande-section-a/domande-section-a.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,11 @@ const routes: Routes = [
       path: 'domande-section-c',
       component: DomandeSectionCComponent
     }
+    ,
+        {
+          path: 'domande-section-a',
+          component: DomandeSectionAComponent
+        }
 ];
 
 @NgModule({
