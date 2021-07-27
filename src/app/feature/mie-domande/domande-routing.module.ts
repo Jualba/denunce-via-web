@@ -6,6 +6,7 @@ import { DomandaDetailComponent } from './domanda-detail/domanda-detail.componen
 import { DomadeDiIscrizioneComponent } from './domade-di-iscrizione/domade-di-iscrizione.component';
 import { DomandeSectionCComponent } from './domande-section-c/domande-section-c.component';
 import { DomandeSectionAComponent } from './domande-section-a/domande-section-a.component';
+import { DomandeSectionBComponent } from './domande-section-b/domande-section-b.component';
 
 const routes: Routes = [
   {
@@ -30,10 +31,15 @@ const routes: Routes = [
       component: DomandeSectionCComponent
     }
     ,
-        {
+      {
           path: 'domande-section-a',
           component: DomandeSectionAComponent
         }
+         ,
+      {
+          path: 'domande-section-b',
+          component: DomandeSectionBComponent
+       }
 ];
 
 @NgModule({

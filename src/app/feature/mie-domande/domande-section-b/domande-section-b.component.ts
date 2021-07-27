@@ -5,14 +5,15 @@ import { takeUntil } from 'rxjs/operators';
 import { Denuncia } from '../../../shared/models/denuncia/denuncia';
 import { Domanda } from '../../../shared/models/domanda/domanda';
 import { FormBuilder, FormGroup, Validators,FormControl } from '@angular/forms';
-import { TipoDenuncia } from '../../../shared/models/denuncia/tipo-denuncia.enum';
+import { TipoDomanda } from '../../../shared/models/domanda/tipo-domanda.enum';
 
 @Component({
-  selector: 'app-domande-section-a',
-  templateUrl: './domande-section-a.component.html',
-  styleUrls: ['./domande-section-a.component.css']
+  selector: 'app-domande-section-b',
+  templateUrl: './domande-section-b.component.html',
+  styleUrls: ['./domande-section-b.component.css']
 })
-export class DomandeSectionAComponent implements OnInit {
+export class DomandeSectionBComponent implements OnInit {
+
 
   @Input() form: FormGroup;
   @Input() fm: FormControl;
@@ -28,8 +29,11 @@ export class DomandeSectionAComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  this.creaForm();
   }
-
+    creaForm(): void {
+      this.domandaForm = this.fb.group({ tipoDomanda: [TipoDomanda.ISCRIZIONE, Validators.required]});
+      }
    continueDomanda() {
             this.router.navigate(['/mie-domande/domanda-di-iscrizione']).then();
           }
@@ -56,4 +60,5 @@ export class DomandeSectionAComponent implements OnInit {
                 onFocused(e){
                   // do something when input is focused
                 }
+
 }
