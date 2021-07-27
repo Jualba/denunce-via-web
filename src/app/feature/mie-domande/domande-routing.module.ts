@@ -7,6 +7,8 @@ import { DomadeDiIscrizioneComponent } from './domade-di-iscrizione/domade-di-is
 import { DomandeSectionCComponent } from './domande-section-c/domande-section-c.component';
 import { DomandeSectionAComponent } from './domande-section-a/domande-section-a.component';
 import { DomandeSectionBComponent } from './domande-section-b/domande-section-b.component';
+import {AggiungiNuovoSocioComponent} from './aggiungi-nuovo-socio/aggiungi-nuovo-socio.component';
+
 
 const routes: Routes = [
   {
@@ -39,6 +41,11 @@ const routes: Routes = [
       {
           path: 'domande-section-b',
           component: DomandeSectionBComponent
+       }
+         ,
+       {
+          path: 'aggiungi-nuovo-socio',
+          component: AggiungiNuovoSocioComponent
        }
 ];
 

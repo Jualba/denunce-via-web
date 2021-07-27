@@ -1,5 +1,6 @@
 export enum TipoDomanda {
-  ISCRIZIONE = 'TARGA',
+  ISCRIZIONE = 'ISCRIZIONE',
+  OPTION = 'OPTION',
   DOCUMENTI = 'DOCUMENTI',
   TITOLI = 'TITOLI',
   ALTRO = 'ALTRO'

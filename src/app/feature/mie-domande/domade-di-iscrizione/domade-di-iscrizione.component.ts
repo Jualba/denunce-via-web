@@ -57,4 +57,7 @@ export class DomadeDiIscrizioneComponent implements OnInit {
    creaForm(): void {
       this.domandaForm = this.fb.group({ tipoDomanda: [TipoDomanda.ISCRIZIONE, Validators.required]});
       }
+   aggiungiNuovoSocio() : void{
+     this.router.navigate(['/mie-domande/aggiungi-nuovo-socio']).then();
+   }
 }

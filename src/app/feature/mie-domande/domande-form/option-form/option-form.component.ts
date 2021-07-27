@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 // import { Denuncia } from '../../../../shared/models/denuncia/denuncia';
 import { Domanda } from '../../../../shared/models/domanda/domanda';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, Validators ,AbstractControl,FormBuilder} from '@angular/forms';
 import { Subject } from 'rxjs';
 
 @Component({
@@ -14,14 +14,18 @@ export class OptionFormComponent implements OnInit {
   @Input() domanda: Domanda;
   @Input() form: FormGroup;
   radioSelected :string;
-
+  control: FormControl
+  @Input('control') set _control(value: AbstractControl)
+  { this.control = value as FormControl }
   posizioniTarga: any[] = [];
   destroy$ = new Subject<boolean>()
 
-  constructor() { }
+  constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
-    this.mockDati();
+   this.form = this.fb.group({
+      optionIscrizione: ['']
+    })
   }
 
   ngOnChanges(changes: SimpleChanges): void {
